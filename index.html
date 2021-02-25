@@ -4,6 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--     Unity meta -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -18,19 +20,45 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap"
       rel="stylesheet"
     />
+    <!-- Unity links -->
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <link rel="stylesheet" href="TemplateData/style.css" />
     <!-- Custom styles -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="my_style.css" />
 
     <title>Testbed test</title>
   </head>
   <body>
-    <div class="container pt-5">
+    <div class="container pt-3">
       <div class="row text-center">
         <h1>Virtual showroom coming soon!</h1>
         <h3>Industrial AI for Manufacturing and Robotics</h3>
       </div>
+      <!-- Unity div -->
+      <div class="webgl-content pt-2 d-flex justify-content-center">
+        <div
+          class="row"
+          id="unityContainer"
+          style="width: 800px; height: 400px"
+        ></div>
+        <div class="footer row">
+          <div
+            class="fullscreen"
+            onclick="unityInstance.SetFullscreen(1)"
+          ></div>
+        </div>
+      </div>
     </div>
-
+    <!-- Unity scripts -->
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate(
+        "unityContainer",
+        "Build/test_lego.json",
+        { onProgress: UnityProgress }
+      );
+    </script>
     <!-- Optional JavaScript; choose one of the two! -->
     <script src="app.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
