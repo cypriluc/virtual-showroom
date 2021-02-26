@@ -3,8 +3,6 @@
   margin: 0;
   padding: 0;
 }
-.webgl-content {
-}
 
 .webgl-content .logo,
 .progress {
@@ -53,7 +51,7 @@
   margin-top: 5px;
   height: 38px;
   line-height: 38px;
-  font-family: Helvetica, Verdana, Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
 }
 .webgl-content .footer .webgl-logo,
