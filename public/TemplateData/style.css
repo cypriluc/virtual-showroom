@@ -1,3 +1,36 @@
+/* My styles */
+:root {
+  --navy-blue: rgb(33, 54, 101);
+  --royal-blue: rgb(7, 71, 148);
+  --light-orange: rgb(249, 180, 19);
+  --orange: rgb(219, 146, 51);
+  --light-beige: rgb(237, 231, 288);
+}
+html {
+  height: 100%;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: -webkit-gradient(
+      linear,
+      right top,
+      left bottom,
+      from(var(--royal-blue)),
+      to(var(--navy-blue))
+    )
+    fixed;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--light-beige);
+}
+h3 {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+/* Unity styles */
 .webgl-content * {
   border: 0;
   margin: 0;
